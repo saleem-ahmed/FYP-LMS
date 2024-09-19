@@ -1,0 +1,9 @@
+Important: Make sure the python app and react are on the same system. Otherwise, you will have to modify IP Addresses in the Flask App. 
+
+How to run:
+1. Use command 'pip install -r requirements.txt' to install the dependencies.
+2. Run the flask app by using "python face_recognition_flask.py"
+3. Do not close the terminal where you are running the flask app.
+
+
+Note: The image capturing process is done in the JavaScript and not in Python. 

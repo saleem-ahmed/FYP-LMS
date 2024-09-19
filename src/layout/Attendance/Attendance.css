@@ -1,0 +1,95 @@
+.attendance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-feed {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hidden-canvas {
+    display: none;
+  }
+  
+  .captured-image-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .captured-image {
+    width: 300px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .results-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .result-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .result-item {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .recognized {
+    background-color: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+  }
+  
+  .not-recognized {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+  }
+  
+  .instructions {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+  }
+  

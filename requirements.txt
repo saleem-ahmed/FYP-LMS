@@ -1,0 +1,4 @@
+face_recognition
+flask
+flask-cors
+numpy
