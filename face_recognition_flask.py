@@ -7,7 +7,10 @@ import os
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", 'http://127.0.0.1:3000'])  # Only allow requests from React app running on port 3000
+
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+
 # Load known faces
 known_face_encodings = []
 known_face_names = []
@@ -24,6 +27,10 @@ for filename in os.listdir('known_faces'):
         if len(encoding) > 0:
             known_face_encodings.append(encoding[0])
             known_face_names.append(filename.split(".")[0])
+
+
+print(known_face_encodings, "known_face_encodings")
+print(known_face_names, "known_face_names")
 
 # Create 'attendance' directory if it doesn't exist
 if not os.path.exists('attendance'):
@@ -81,4 +88,5 @@ def recognize():
     return jsonify(response_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port='4000')
+

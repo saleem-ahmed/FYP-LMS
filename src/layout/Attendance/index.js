@@ -23,6 +23,7 @@ const Attendance = () => {
     startWebcam();
 
     const handleKeyPress = (e) => {
+      console.log("hello")
       if (e.key.toLowerCase() === 'q') {
         captureImage();
       }
@@ -54,7 +55,7 @@ const Attendance = () => {
     formData.append('file', blob);
 
     try {
-      const response = await axios.post('http://localhost:5000/recognize', formData, {
+      const response = await axios.post('http://localhost:4000/recognize', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setResult(response.data.recognized_faces);  // Set the result from the backend
