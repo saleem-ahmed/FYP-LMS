@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import ActiveCourse from "./ActiveCourse";
 import MainPage from "./mainpage";
 import Attendance from "./Attendance/index";
+import AttendanceSheet from "./attendancesheet";
 function App() {
   return (
     <Routes>
@@ -12,7 +13,8 @@ function App() {
         <Route index element={<MainPage />} />
         <Route path="main" element={<MainPage />} />
         <Route path="active" element={<ActiveCourse />} />
-        <Route path="attendance" element={<Attendance />} />
+        <Route path="active/attendance" element={<Attendance />} />
+        <Route path="sheet" element={<AttendanceSheet />} />
       </Route>
     </Routes>
   );

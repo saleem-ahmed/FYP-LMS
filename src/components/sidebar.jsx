@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <>
-      <div class="h-full px-3 pb-4 overflow-y-auto  bg-[#212137] dark:bg-gray-800">
+      <div class="h-full px-3 pb-4 overflow-y-auto  bg-[#212137] dark:bg-gray-800 pt-6">
         <ul class="space-y-2 font-medium">
           <li>
             <a
@@ -43,8 +43,8 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="active"
               class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 hover:text-[#212137] dark:hover:bg-gray-700 group"
             >
               <svg
@@ -57,9 +57,9 @@ const Sidebar = () => {
                 <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
               </svg>
               <span class="flex-1 ms-3 whitespace-nowrap">Active Courses</span>
-            </a>
+            </Link>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#"
               class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 hover:text-[#212137] dark:hover:bg-gray-700 group"
@@ -75,10 +75,10 @@ const Sidebar = () => {
               </svg>
               <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
             </a>
-          </li>
+          </li> */}
           <li>
             <Link
-              to="attendance"
+              to="sheet"
               class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 hover:text-[#212137] dark:hover:bg-gray-700 group"
             >
               <svg
@@ -90,16 +90,46 @@ const Sidebar = () => {
               >
                 <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
               </svg>
-              <span class="flex-1 ms-3 whitespace-nowrap">Attendance</span>
+              <span class="flex-1 ms-3 whitespace-nowrap">
+                Attendance Sheet
+              </span>
             </Link>
           </li>
-          
+
           <li>
             <Link
               to="/"
               class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 hover:text-[#212137] dark:hover:bg-gray-700 group"
             >
-             
+              <svg
+                class="flex-shrink-0 w-5 h-5 fill-white transition duration-75 dark:text-gray-400 group-hover:fill-gray-900 dark:group-hover:fill-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L13 12"
+                  stroke="#323232"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 15L20.913 12.087V12.087C20.961 12.039 20.961 11.961 20.913 11.913V11.913L18 9"
+                  stroke="#323232"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16 5V4.5V4.5C16 3.67157 15.3284 3 14.5 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H14.5C15.3284 21 16 20.3284 16 19.5V19.5V19"
+                  stroke="#323232"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
               <span class="flex-1 ms-3 whitespace-nowrap">Log Out</span>
             </Link>
           </li>

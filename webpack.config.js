@@ -1,6 +1,14 @@
 const webpack = require('webpack');
 
 module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.txt$/,
+        use: 'raw-loader',
+      },
+    ],
+  },
   resolve: {
     fallback: {
       http: require.resolve('stream-http'),
